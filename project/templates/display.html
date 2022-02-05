@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="static/home.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <h1>Data</h1>
+      <br />
+      <form class="form1" method="POST">
+
+            {% for row in data %}
+            <br />
+            <div class="card w-75">
+              <h5 style="background-color:paleturquoise ;"  class="card-header">Block: {{row["block"]}}</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title">Result: {{row["result"]}}</h5>
+                  </div>
+                  <div class="col-sm">
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+      </form>
+    </div>
+  </body>
+</html>
